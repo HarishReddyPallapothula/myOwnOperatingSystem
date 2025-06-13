@@ -1,0 +1,98 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x80200000                        . = 0x80200000
+
+.text           0x80200000       0x50
+ *(.text.boot)
+ .text.boot     0x80200000       0x10 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+                0x80200000                boot
+ *(.text .text.*)
+ .text          0x80200010       0x40 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+                0x80200010                memset
+                0x8020002c                kernel_main
+
+.rela.dyn       0x80200050        0x0
+ .rela.text     0x80200050        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+ .rela.text.boot
+                0x80200050        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.rodata
+ *(.rodata .rodata.*)
+
+.data           0x80200050        0x0
+ *(.data .data.*)
+ .data          0x80200050        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.bss            0x80200050        0x0
+                0x80200050                        __bss = .
+ *(.bss .bss.* .sbss .sbss.*)
+ .bss           0x80200050        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+                0x80200050                        __bss_end = .
+                0x80200050                        . = ALIGN (0x4)
+                0x80220050                        . = (. + 0x20000)
+                0x80220050                        __stack_top = .
+LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+OUTPUT(kernel.elf elf32-littleriscv)
+
+.debug_info     0x00000000      0x16a
+ .debug_info    0x00000000      0x16a /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_abbrev   0x00000000      0x11c
+ .debug_abbrev  0x00000000      0x11c /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_loclists
+                0x00000000       0xa3
+ .debug_loclists
+                0x00000000       0xa3 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_aranges  0x00000000       0x28
+ .debug_aranges
+                0x00000000       0x28 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_rnglists
+                0x00000000       0x19
+ .debug_rnglists
+                0x00000000       0x19 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_macro    0x00000000      0x85b
+ .debug_macro   0x00000000       0x11 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+ .debug_macro   0x00000011      0x84a /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_line     0x00000000      0x11f
+ .debug_line    0x00000000      0x11f /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_str      0x00000000     0x2acd
+ .debug_str     0x00000000     0x2acd /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+                               0x2b04 (size before relaxing)
+
+.debug_line_str
+                0x00000000       0x3d
+ .debug_line_str
+                0x00000000       0x3d /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.comment        0x00000000       0x12
+ .comment       0x00000000       0x12 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+                                 0x13 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.riscv.attributes
+                0x00000000       0x42
+ .riscv.attributes
+                0x00000000       0x42 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
+
+.debug_frame    0x00000000       0x40
+ .debug_frame   0x00000000       0x40 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccoub4Ik.o
