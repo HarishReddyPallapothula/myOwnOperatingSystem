@@ -10,7 +10,8 @@ CFLAGS="-std=c11 -O2 -g3 -Wall -Wextra -march=rv32ima -mabi=ilp32 -fno-stack-pro
 
 # Build the kernel
 $CC $CFLAGS -Wl,-Tkernel.ld -Wl,-Map=kernel.map -o kernel.elf \
-    kernel.c
+    boot.s kernel.c common.c
+
 
 # Start QEMU
 $QEMU -machine virt -bios default -nographic -serial mon:stdio -echr 0x02 --no-reboot \
