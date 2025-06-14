@@ -1,13 +1,13 @@
 
 Discarded input sections
 
- .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
- .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
- .debug_macro   0x00000000      0x826 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
- .debug_macro   0x00000000       0x40 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+ .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
+ .group         0x00000000        0xc /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
+ .debug_macro   0x00000000      0x826 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
+ .debug_macro   0x00000000       0x46 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 Memory Configuration
 
@@ -18,137 +18,146 @@ Linker script and memory map
 
                 0x80200000                        . = 0x80200000
 
-.text           0x80200000      0x454
+.text           0x80200000      0x4e8
  *(.text.boot)
  *(.text .text.*)
- .text          0x80200000       0x10 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
+ .text          0x80200000       0x10 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
                 0x80200000                boot
- .text          0x80200010      0x1c4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
-                0x80200010                kernel_entry
-                0x80200120                sbi_call
-                0x80200130                putchar
-                0x80200154                handle_trap
-                0x80200184                kernel_main
- .text          0x802001d4      0x280 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
-                0x802001d4                printf
-                0x802003a8                memcpy
-                0x802003cc                memset
-                0x802003e8                strcpy
-                0x80200410                strcmp
+ .text          0x80200010      0x258 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+                0x80200010                alloc_pages
+                0x80200074                sbi_call
+                0x80200084                putchar
+                0x802000a8                kernel_entry
+                0x802001b8                handle_trap
+                0x802001e8                kernel_main
+ .text          0x80200268      0x280 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
+                0x80200268                printf
+                0x8020043c                memcpy
+                0x80200460                memset
+                0x8020047c                strcpy
+                0x802004a4                strcmp
 
-.rodata         0x80200454       0x75
+.rodata         0x802004e8       0xd5
  *(.rodata .rodata.*)
  .rodata.str1.4
-                0x80200454       0x75 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
-                                 0x63 (size before relaxing)
+                0x802004e8       0xd5 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+                                 0xc3 (size before relaxing)
  .rodata.str1.4
-                0x802004c9       0x11 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x802005bd       0x11 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.rela.dyn       0x802004cc        0x0
- .rela.text     0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
+.rela.dyn       0x802005c0        0x0
+ .rela.text     0x802005c0        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+ .rela.sdata    0x802005c0        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
 
-.data           0x802004cc        0x0
+.data           0x802005c0        0x0
  *(.data .data.*)
- .data          0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
- .data          0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .data          0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+ .data          0x802005c0        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+ .data          0x802005c0        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .data          0x802005c0        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.bss            0x802004cc        0x0
-                0x802004cc                        __bss = .
+.sdata          0x802005c0        0x4
+ .sdata         0x802005c0        0x4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+
+.bss            0x802005c4        0x0
+                0x802005c4                        __bss = .
  *(.bss .bss.* .sbss .sbss.*)
- .bss           0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
- .bss           0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .bss           0x802004cc        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
-                0x802004cc                        __bss_end = .
-                0x802004cc                        . = ALIGN (0x4)
-                0x802204cc                        . = (. + 0x20000)
-                0x802204cc                        __stack_top = .
-LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
-LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
-LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+ .bss           0x802005c4        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+ .bss           0x802005c4        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .bss           0x802005c4        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
+                0x802005c4                        __bss_end = .
+                0x802005c4                        . = ALIGN (0x4)
+                0x802205c4                        . = (. + 0x20000)
+                0x802205c4                        __stack_top = .
+                0x80221000                        . = ALIGN (0x1000)
+                0x80221000                        __free_ram = .
+                0x84221000                        . = (. + 0x4000000)
+                0x84221000                        __free_ram_end = .
+LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+LOAD /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 OUTPUT(kernel.elf elf32-littleriscv)
 
 .riscv.attributes
                 0x00000000       0x37
  .riscv.attributes
-                0x00000000       0x31 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
+                0x00000000       0x31 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
  .riscv.attributes
-                0x00000031       0x37 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+                0x00000031       0x37 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
  .riscv.attributes
-                0x00000068       0x33 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x00000068       0x33 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 .comment        0x00000000       0x12
- .comment       0x00000000       0x12 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+ .comment       0x00000000       0x12 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
                                  0x13 (size before relaxing)
- .comment       0x00000012       0x13 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+ .comment       0x00000012       0x13 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 .note.GNU-stack
                 0x00000000        0x0
  .note.GNU-stack
-                0x00000000        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+                0x00000000        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
  .note.GNU-stack
-                0x00000000        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x00000000        0x0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.debug_line     0x00000000      0x78d
- .debug_line    0x00000000       0x50 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
- .debug_line    0x00000050      0x289 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_line    0x000002d9      0x4b4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+.debug_line     0x00000000      0x85a
+ .debug_line    0x00000000       0x50 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+ .debug_line    0x00000050      0x356 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_line    0x000003a6      0x4b4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 .debug_line_str
                 0x00000000       0x6c
  .debug_line_str
-                0x00000000       0x6c /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
+                0x00000000       0x6c /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
                                  0x48 (size before relaxing)
  .debug_line_str
-                0x0000006c       0x5c /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+                0x0000006c       0x5c /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
  .debug_line_str
-                0x0000006c       0x53 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x0000006c       0x53 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.debug_info     0x00000000      0x942
- .debug_info    0x00000000       0x24 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
- .debug_info    0x00000024      0x5b9 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_info    0x000005dd      0x365 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+.debug_info     0x00000000      0xa92
+ .debug_info    0x00000000       0x24 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+ .debug_info    0x00000024      0x709 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_info    0x0000072d      0x365 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.debug_abbrev   0x00000000      0x3ab
- .debug_abbrev  0x00000000       0x14 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
- .debug_abbrev  0x00000014      0x219 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_abbrev  0x0000022d      0x17e /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+.debug_abbrev   0x00000000      0x3f6
+ .debug_abbrev  0x00000000       0x14 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
+ .debug_abbrev  0x00000014      0x264 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_abbrev  0x00000278      0x17e /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 .debug_aranges  0x00000000       0x60
  .debug_aranges
-                0x00000000       0x20 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
+                0x00000000       0x20 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
  .debug_aranges
-                0x00000020       0x20 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+                0x00000020       0x20 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
  .debug_aranges
-                0x00000040       0x20 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x00000040       0x20 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.debug_str      0x00000000     0x2da0
- .debug_str     0x00000000     0x2da0 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccTO7Qbe.o
+.debug_str      0x00000000     0x2df6
+ .debug_str     0x00000000     0x2df6 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccsbY3UC.o
                                  0x54 (size before relaxing)
- .debug_str     0x00002da0     0x2d75 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_str     0x00002da0     0x2bc4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+ .debug_str     0x00002df6     0x2dd1 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_str     0x00002df6     0x2bd3 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 .debug_loclists
-                0x00000000      0x34e
+                0x00000000      0x3bc
  .debug_loclists
-                0x00000000       0xe4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+                0x00000000      0x152 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
  .debug_loclists
-                0x000000e4      0x26a /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x00000152      0x26a /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
 .debug_rnglists
                 0x00000000       0x44
  .debug_rnglists
-                0x00000000       0x17 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
+                0x00000000       0x17 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
  .debug_rnglists
-                0x00000017       0x2d /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+                0x00000017       0x2d /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.debug_macro    0x00000000      0x8b9
- .debug_macro   0x00000000       0x23 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_macro   0x00000023      0x826 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_macro   0x00000849       0x40 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_macro   0x00000889       0x16 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_macro   0x0000089f       0x1a /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+.debug_macro    0x00000000      0x8bf
+ .debug_macro   0x00000000       0x23 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_macro   0x00000023      0x826 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_macro   0x00000849       0x46 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_macro   0x0000088f       0x16 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_macro   0x000008a5       0x1a /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
 
-.debug_frame    0x00000000      0x11c
- .debug_frame   0x00000000       0x78 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccQkPHjQ.o
- .debug_frame   0x00000078       0xa4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccxa78WH.o
+.debug_frame    0x00000000      0x13c
+ .debug_frame   0x00000000       0x98 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//ccOrMXmv.o
+ .debug_frame   0x00000098       0xa4 /var/folders/rk/5pymwj7s2mvc2gsbzx6hss3m0000gn/T//cc8DGsKj.o
